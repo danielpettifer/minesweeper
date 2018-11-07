@@ -1,11 +1,17 @@
-var blankLine = ' | | ';
-console.log('This is what an empty board will look like');
-console.log(blankLine);
-console.log(blankLine);
-console.log(blankLine);
-var guessLine = '1| | ';
-var bombLine = ' |B| ';
-console.log('This is what a board ,ight look like during a game');
-console.log(guessLine);
-console.log(bombLine);
-console.log(blankLine);
+const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
+	const board = [];
+	// do this action a certain number of times **for loop** use descriptive variable names
+	for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex ++) {
+		// create the board array
+		const row = [];
+		// add another loop here for the 
+		for (let columnIndex = 0; columnIndex < numberOfColumns; columnIndex ++) {
+			row.push(' ');
+		}
+		board.push(row);
+	}
+	// make sure you return
+	return board;
+};
+
+console.log(generatePlayerBoard(5,3));
